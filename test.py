@@ -11,6 +11,10 @@ for filepath in files:
     with open(filepath, 'r') as file:
         print(file.read())
 
+
+"""
+Open browser and write user_term to google search 
+"""
 user_term = input('Enter key word: ')
 
 webbrowser.open('https://www.google.com/search?q=' + user_term)
