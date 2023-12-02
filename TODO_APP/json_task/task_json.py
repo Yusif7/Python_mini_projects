@@ -1,6 +1,6 @@
 import json
 
-with open('files/test.json', 'r') as file:
+with open('test.json', 'r') as file:
     content = file.read()
 
 # Convert content of json file from str to list

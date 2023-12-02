@@ -8,7 +8,7 @@ def add_todo():
     # Define our inout
     todo_local = st.session_state['new_todo'] + '\n'
     todos.append(todo_local)
-    functions.write_todos('files/todos.txt', todos)
+    functions.write_todos('../files/todos.txt', todos)
 
 
 st.title('My Title')
@@ -22,7 +22,7 @@ for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
     if checkbox:  # If we select any todo
         todos.pop(index)
-        functions.write_todos('files/todos.txt',todos)  # Save changes in our text document
+        functions.write_todos('../files/todos.txt', todos)  # Save changes in our text document
         del st.session_state[todo]  # Delete also from session
         st.rerun()
 
